@@ -25,9 +25,6 @@
     ]
   ];
 
-  foreach ($database as $faq) {
-    echo $faq['domanda'] . ' ' . $faq['risposta'];
-  }
 ?>
 
 
@@ -38,6 +35,8 @@
     <title></title>
   </head>
   <body>
-
+    <?php foreach ($database as $faq) { ?>
+      <?php echo $faq['domanda']. ' ' . $faq['risposta'] ?>
+    <?php } ?>
   </body>
 </html>
