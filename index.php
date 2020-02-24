@@ -26,4 +26,21 @@ $database = [
   ],
 ];
 
-var_dump($database) ?>
+//var_dump($database) ?>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Google-form</title>
+  </head>
+  <body>
+    <?php foreach ($database as $domanda => $risposte) { ?>
+      <h1><?php echo $domanda; ?></h1>
+      <?php foreach ($risposte as $risposta) {?>
+        <?php foreach ($risposta as $paragrafo){ ?>
+          <p><?php echo $paragrafo ?></p>
+        <?php } ?>
+      <?php } ?>
+
+    <?php } ?>
